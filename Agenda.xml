@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Agenda>
+    <Persona>
+        <name>Juan</name>
+        <email>a@a.com</email>
+        <telephone>123456</telephone>
+    </Persona>
+    <Persona>
+        <name>AAAA</name>
+        <email>q@q.com</email>
+        <telephone>321</telephone>
+    </Persona>
+    <Persona>
+        <name>pepe</name>
+        <email>pepe@gmail.com</email>
+        <telephone>321</telephone>
+    </Persona>
+    <Persona>
+        <name>pepe</name>
+        <email>pepe@gmail.com</email>
+        <telephone>321</telephone>
+    </Persona>
+</Agenda>

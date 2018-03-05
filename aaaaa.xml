@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Agenda>
+    <Persona>
+        <name>Juan</name>
+        <email>a@a.com</email>
+        <telephone>123456</telephone>
+    </Persona>
+</Agenda>
