@@ -6,19 +6,14 @@
 package agendajuanan;
 
 import java.io.File;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import javax.xml.bind.JAXBException;
-import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -39,7 +34,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static Agenda nuestraAgenda = new Agenda();
-
+    static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) throws JAXBException {
         Marshall m = new Marshall();
 
@@ -132,26 +127,25 @@ public class Main {
                         }
 
                         break;
-                    case 5:
+                    case 5:                        
+                        System.out.print("Ingrese la sentencia xpath: ");
+                        String sentencia = entrada.next();
                         XPathEvaluator xpath = new XPathEvaluator();
-                        xpath.XPath();
+                       String lista = xpath.ejecutarSentencia(sentencia);
+                        System.out.println(lista);
                         break;
-
                     case 6:
                         XQuery xq = new XQuery();
-                        Scanner entrada1 = new Scanner(System.in);
                         System.out.print("Ingrese el nombre del archivo xquery: ");
-                        String archivo = entrada1.nextLine();
+                        String archivo = entrada.nextLine();
                         xq.ejecutarQuery(archivo);
                         break;
                     case 7:
                         ExportarContacto ex = new ExportarContacto();
-                        Scanner entrada = new Scanner(System.in);
                         System.out.print("Ingrese su nombre del contacto: ");
                         String name = entrada.nextLine();
-                        Scanner entrad = new Scanner(System.in);
                         System.out.print("Ingrese nombre del fichero: ");
-                        String ficheroXML = entrad.nextLine();
+                        String ficheroXML = entrada.nextLine();
                         ex.CogerXML(name,ficheroXML);
                         break;
                     case 8:

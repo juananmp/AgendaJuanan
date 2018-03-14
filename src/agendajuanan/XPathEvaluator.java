@@ -7,6 +7,7 @@ package agendajuanan;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
@@ -14,9 +15,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
@@ -56,6 +59,22 @@ public class XPathEvaluator {
         } catch (ParserConfigurationException ex) {
             Logger.getLogger(XPathEvaluator.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public String ejecutarSentencia(String sentencia) {
+        try {
+            File xmlFile = new File("Agenda.xml");
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(xmlFile.getAbsolutePath());
+            XPathFactory xPathfactory = XPathFactory.newInstance();
+            XPath xpath = xPathfactory.newXPath();
+            XPathExpression expr = xpath.compile(sentencia);
+            String algo =  expr.evaluate(doc, XPathConstants.STRING).toString();
+            return algo;
+        } catch (ParserConfigurationException | SAXException | IOException | XPathExpressionException ex) {
+            //Logger.getLogger(EjecutorXPath.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
     }
 
