@@ -66,7 +66,7 @@ public class Main {
             System.out.println("6. Mostrar todos los nombres de Agenda");
             System.out.println("7. Exportar contacto ");
             System.out.println("8. Importar contacto ");
-            System.out.println("7. Salir");
+            System.out.println("9. Salir");
 
             try {
 
@@ -75,9 +75,9 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        Persona p = new Persona();
+//                        Persona p = new Persona();
                         Agenda agenda = new Agenda();
-                        agenda.setPersona(p);
+//                        agenda.setPersona(p);
                         m.Marshall(agenda);
                         break;
 

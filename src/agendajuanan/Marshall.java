@@ -54,13 +54,13 @@ public class Marshall {
             System.out.print("Ingrese la numero de telefono: ");
             telephone = entrada.nextInt();
 
-            ArrayList<Persona> lista = new ArrayList<Persona>();
+//            ArrayList<Persona> lista = new ArrayList<Persona>();
 
             p.setName(name);
             p.setEmail(email);
             p.setTelephone(telephone);
             File XMLfile = new File("Agenda.xml");
-            lista.add(p);
+//            lista.add(p);
             Main.nuestraAgenda.setPersona(p);
             agenda.setPersona(p);
             marshaller.marshal(Main.nuestraAgenda, XMLfile);
