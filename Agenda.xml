@@ -21,9 +21,6 @@
         <telephone>321</telephone>
     </Persona>
     <Persona>
-        <telephone>0</telephone>
-    </Persona>
-    <Persona>
         <name>manolo</name>
         <email>manolo@gmail.com</email>
         <telephone>3243</telephone>
@@ -32,5 +29,15 @@
         <name>miriam</name>
         <email>miriam@gmail.com</email>
         <telephone>54321</telephone>
+    </Persona>
+    <Persona>
+        <name>adwa</name>
+        <email>juan@gmail.com</email>
+        <telephone>321</telephone>
+    </Persona>
+    <Persona>
+        <name>wef</name>
+        <email>juan@gmail.com</email>
+        <telephone>31</telephone>
     </Persona>
 </Agenda>
