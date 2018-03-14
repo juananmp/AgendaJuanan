@@ -63,7 +63,7 @@ public class Main {
             System.out.println("3. Well Formed (DTD)");
             System.out.println("4. Validar XSD");
             System.out.println("5. XPath");
-            System.out.println("6. Mostrar todos los nombres de Agenda");
+            System.out.println("6. Ejecutar archivo XQuery");
             System.out.println("7. Exportar contacto ");
             System.out.println("8. Importar contacto ");
             System.out.println("9. Salir");
@@ -139,7 +139,10 @@ public class Main {
 
                     case 6:
                         XQuery xq = new XQuery();
-                        xq.ejecutarQuery();
+                        Scanner entrada1 = new Scanner(System.in);
+                        System.out.print("Ingrese el nombre del archivo xquery: ");
+                        String archivo = entrada1.nextLine();
+                        xq.ejecutarQuery(archivo);
                         break;
                     case 7:
                         ExportarContacto ex = new ExportarContacto();

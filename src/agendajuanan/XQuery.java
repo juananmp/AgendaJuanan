@@ -27,10 +27,10 @@ import org.w3c.dom.Node;
  * @author janto
  */
 public class XQuery {
-    public void ejecutarQuery(){
+    public void ejecutarQuery(String archivo){
             try {
             //Try with different Querys Query_1, Query_2, ...
-            File queryFile = new File("Query_2.xqy"); //
+            File queryFile = new File(archivo); //
 
             XQDataSource xqjd = new SaxonXQDataSource();
             XQConnection xqjc = xqjd.getConnection();
