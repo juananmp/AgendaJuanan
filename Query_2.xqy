@@ -1,4 +1,4 @@
 for $x in doc("Agenda.xml")/Agenda/Persona
-return if ($x/@categoria="Children")
-then <child>{data($x/name)}</child>
-else <adult>{data($x/name)}</adult>
+return if ($x/@name="")
+then <name>{data($x/name)}</name>
+else <name>{data($x/name)}</name>
